@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url(bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 3cm;
+}
+.nav_img img {
+  cursor: pointer;
+  position: absolute;
+  width: 200px;
+  left: 10%;
+  top: -100px;
+}
+.icon i {
+  cursor: pointer;
+  font-size: 35px;
+  position: absolute;
+  width: 150px;
+  top: -90px;
+  color: rgb(95, 95, 94);
+}
+
+.icon .fa-bars {
+  position: absolute;
+  right: 40px;
+}
+.icon i:hover {
+  color: black;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.container h2 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: dimgray;
+  padding-top: 7cm;
+  padding-left: 2cm;
+  font-size: 40px;
+  transition: 1.5s;
+  text-transform: uppercase;
+  display: flex;
+}
+
+h2 span {
+  transition: 1.5s;
+}
+h2:hover span {
+  filter: blur(40px);
+  opacity: 0;
+  transform: scale(2);
+}
+h2 span:nth-child(2n + 1) {
+  transition-delay: 0s;
+}
+h2 span:nth-child(2n + 2) {
+  transition-delay: 0.1s;
+}
+.icon_circle i {
+  cursor: pointer;
+  font-size: 17px;
+  position: absolute;
+  width: 150px;
+  bottom: 10px;
+  left: 17cm;
+  color: rgb(255, 255, 255);
+  transition: 1.5s;
+  text-transform: uppercase;
+}
+.icon_circle .fa-circle:hover {
+  border-radius: solid 2px black;
+  filter: blur(20px);
+  opacity: 0;
+  transform: scale(1);
+}
+.main {
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.main_desk h2 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.main_desk p {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  margin-left: 15cm;
+}
+
+:root {
+  --gap: 25px;
+}
+
+.grid-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap) !important;
+  padding: var(--gap) !important;
+  position: relative;
+}
+
+.grid-gallery .wp-block-image,
+.grid-gallery img {
+  width: 100% !important;
+}
+
+.grid-gallery .wp-block-image:first-child {
+  grid-column: 2;
+  grid-row: 2/5;
+}
+
+.grid-gallery .wp-block-image:nth-child(2) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.grid-gallery .wp-block-image:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2/5;
+}
+.grid-gallery .wp-block-image:last-child {
+  grid-column: 4/3;
+  grid-row: 1/4;
+}
+.grid-gallery .wp-block-image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.grid-gallery .wp-block-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.4s ease-out;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 5%,
+    hsl(0deg 0% 0% / 33%)
+  );
+}
+
+.grid-gallery .wp-block-image:hover:before {
+  opacity: 1;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.grid-gallery .wp-block-image:after {
+  content: " Designer";
+  position: absolute;
+  font-size: 25px;
+  font-weight: 500;
+  color: #000000;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  top: 105%;
+  transition: 0.3s ease-out;
+  z-index: 1;
+}
+
+.grid-gallery .wp-block-image:last-child::after {
+  left: 10.5% !important;
+}
+
+.grid-gallery .wp-block-image:first-child:hover::after {
+  left: 20% !important;
+  top: 96% !important;
+}
+.grid-gallery .wp-block-image:nth-child(2):hover::after {
+  left: 20% !important;
+  top: 90%;
+}
+.grid-gallery .wp-block-image:nth-child(3):hover::after {
+  left: 20% !important;
+  top: 90%;
+}
+.grid-gallery .wp-block-image:last-child:hover::after {
+  left: 10.5% !important;
+  top: 94% !important;
+}
+.main h4 {
+  cursor: pointer;
+  font-size: 30px;
+  margin-left: 18px;
+}
+.main h4:hover {
+  color: rgb(207, 204, 204);
+  text-shadow: 2px 2px 2px rgba(242, 238, 238, 0.5);
+}
+.bc-main {
+  background-color: #353434;
+  height: 110vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
